@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdio>
+#include "consts.h"
 using namespace std;
 
 int main() {
@@ -7,13 +9,13 @@ int main() {
     char c;
     do {
         cin >> cmd;
-        if (cmd == "insert") {
+        if (cmd == Command::insert) {
             scanf(" (%d,%d,%d,%d) %c %d", &w, &h, &x, &y, &c, &z);
             cout << w << h << x << y << c << z;
         }
-        if (cmd != "exit") {
+        if (cmd != Command::exit) {
             cout << "Unknown command! Ignoring!" << endl;
         }
-    } while (cmd != "exit");
+    } while (cmd != Command::exit);
     return 0;
 }

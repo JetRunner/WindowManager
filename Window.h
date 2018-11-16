@@ -32,7 +32,7 @@ public:
 
     void setContent(char content);
 
-    bool operator<(const Window& window);
+    bool operator<(const Window& window) const;
 
 private:
     int x, y, z, w, h;

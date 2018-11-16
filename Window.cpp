@@ -52,6 +52,6 @@ void Window::setContent(char content) {
     Window::content = content;
 }
 
-bool Window::operator<(const Window &window) {
-    return this->z < window.z;
+bool Window::operator<(const Window &window) const {
+    return Window::z < window.z;
 }
