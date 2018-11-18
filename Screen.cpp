@@ -2,6 +2,7 @@
 // Created by Canwen Xu on 2018/11/17.
 //
 #include <iostream>
+#include <vector>
 #include "Screen.h"
 
 Screen::Screen(int x, int y) {
@@ -29,5 +30,16 @@ void Screen::print() {
             std::cout << Screen::pixel[i * y + j];
         }
         std::cout << std::endl;
+    }
+}
+
+void Screen::render(std::vector<Window> windows) {
+    std::vector<Window>::iterator it;
+    for (it = windows.begin(); it != windows.end(); it++) {
+        for (int i = it->getX(); i < std::min(it->getX() + it->getH(), x); i++) {
+            for (int j = it->getY(); j < std::min(it->getY() + it->getW(), y); j++) {
+                Screen::pixel[i * x + j] = it->getContent();
+            }
+        }
     }
 }

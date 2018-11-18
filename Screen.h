@@ -1,6 +1,8 @@
 //
 // Created by Canwen Xu on 2018/11/17.
 //
+#include <vector>
+#include "Window.h"
 
 #ifndef WINDOWMANAGER_SCREEN_H
 #define WINDOWMANAGER_SCREEN_H
@@ -14,6 +16,7 @@ public:
     ~Screen();
     void print();
     void clear();
+    void render(std::vector<Window> windows);
 };
 
 

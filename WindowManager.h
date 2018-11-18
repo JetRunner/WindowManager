@@ -1,7 +1,7 @@
 //
 // Created by Canwen Xu on 2018/11/16.
 //
-#include <queue>
+#include <vector>
 #include "Window.h"
 
 #ifndef WINDOWMANAGER_WINDOWMANAGER_H
@@ -9,10 +9,14 @@
 
 
 class WindowManager {
-    std::priority_queue<Window> windows;
+    int count = 0;
+    std::vector<Window> windows;
 public:
-    void insertWindow(Window window);
-    std::priority_queue<Window> getQueue() const;
+    int insertWindow(Window window);
+    bool removeWindow(int id);
+    bool resizeWindow(int id, int w, int h);
+    bool moveWindow(int id, int x, int y);
+    std::vector<Window> getQueue() const;
 };
 
 

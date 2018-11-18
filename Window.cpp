@@ -55,3 +55,14 @@ void Window::setContent(char content) {
 bool Window::operator<(const Window &window) const {
     return Window::z < window.z;
 }
+
+Window::Window(int x, int y, int z, int w, int h, char content) : x(x), y(y), z(z), w(w), h(h), content(content) {
+}
+
+int Window::getId() const {
+    return id;
+}
+
+void Window::setId(int id) {
+    Window::id = id;
+}

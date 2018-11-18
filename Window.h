@@ -8,6 +8,14 @@
 
 class Window {
 public:
+    int getId() const;
+
+    void setId(int id);
+
+public:
+    Window(int x, int y, int z, int w, int h, char content);
+
+public:
     int getX() const;
 
     void setX(int x);
@@ -35,7 +43,7 @@ public:
     bool operator<(const Window& window) const;
 
 private:
-    int x, y, z, w, h;
+    int x, y, z, w, h, id;
     char content;
 };
 

@@ -9,8 +9,12 @@
 using std::string;
 namespace Command {
     const string exit = "exit";
+    const string help = "help";
     const string insert = "insert";
     const string render = "render";
+    const string remove = "remove";
+    const string resize = "resize";
+    const string move = "move";
 }
 
 
